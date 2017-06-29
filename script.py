@@ -93,11 +93,13 @@ class Test:
         return som/self.repetition
 
 if __name__ == '__main__':
-    test1 = Test("sudoku-DLV", 50)
-    test2 = Test("3col-DLV", 50)
-    test3 = Test("3col-CLINGO", 50)
-    test4 = Test("sudoku-CLINGO", 50)
-    allTests = [test1, test2, test3, test4]
+    test1 = Test("sudoku-DLV", 10)
+    test2 = Test("3col-CLINGO", 10)
+    test3 = Test("3col-DLV", 10)
+    test4 = Test("sudoku-CLINGO", 10)
+    test5 = Test("strategicCompanies-DLV", 10)
+    test6 = Test("strategicCompanies-CLINGO", 10)
+    allTests = [test1, test2, test3, test4, test5, test6]
     with open('tempi.csv', 'w', newline='') as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=';')
         for i in allTests:
